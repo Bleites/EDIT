@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        body{
+            background-color: #F4F5FA;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar{
+            background-color: #FFFFFF;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .navbar img{
+            margin-left: 50px;
+            width: 40px;
+        }
+
+        .main-login{
+            background-color: transparent;
+        }
+        
+        .FormLogin{
+                width: 320px;
+                height: 400px;
+                margin: 100px auto 0;
+                font-family: sans-serif;
+                text-align: center;
+                border: transparent;
+                border-radius: 5%;
+                background-color: #FFFFFF;
+        }
+
+        .FormLogin-user-data{
+            display: flex;
+            flex-direction: column;
+            margin: 0 25px;
+        }
+
+        .form-logo{
+            width: 44px;
+            height: 43px;
+            margin: 20px;
+        }
+
+        .form-first-container p{
+            font-size: 0.7em;
+            color: grey;
+            margin: 10px 10px 35px 10px;
+        }
+
+        form input{
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: transparent;
+            background: rgba(239, 241, 249, 0.6);
+            margin: 10px;
+        }
+
+        form p a{
+            text-decoration: none;
+        }
+
+        form p{
+            
+            font-size: 0.7em;
+            text-align: right;
+            margin-right: 40px ;
+        }
+
+
+        .form-third-container p{
+            font-size: 0.7em;
+            color: grey;
+            margin: 25px 20px;
+        }
+
+        .form-third-container button{
+            padding: 12px 40px;
+            border: transparent;
+            background: #5570F1;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .form-third-container button:active{
+            color: white;
+            background-color: rgb(132, 132, 246);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="/Dashboard Page/assets/icon-graph.png" alt="">
+    </nav>
+
+    <main class="main-login"> 
+        <div class="FormLogin">
+
+            <div class="form-first-container">
+                <img class="form-logo" src="/Dashboard Page/assets/icon-graph.png" alt="">
+                <h2>Welcome Back!</h2>
+                <p>Login to your account</p>
+            </div>
+
+            <form action="#" method="post" class="FormLogin-user-data">
+
+                <input type="email"  placeholder="Email Adress" id="email" name="email">
+
+                <input type="password" placeholder="Password" id="password" name="password">
+
+                <p><a href="#">Recover Password</a></p>
+
+            </form>
+        
+
+            <div class="form-third-container">
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+
+                <button>Login</button>
+            </div>
+
+        </div>
+    </main> 
+    
+</body>
+</html>

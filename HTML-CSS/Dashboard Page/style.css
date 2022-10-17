@@ -1,0 +1,658 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+aside {
+  width: 250px;
+  min-height: 1152px;
+  background-color: white;
+}
+
+.asidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.aside-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 25px;
+  padding: 5px 0px 10px 0px;
+}
+
+.aside-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 30px 8px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.notify-bullet::after {
+  content: "3";
+  height: 20px;
+  width: 20px;
+  background-color: orange;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.notify-conversations::after {
+  content: "13";
+}
+
+.active-button {
+  background-color: blue;
+  color: white;
+}
+
+.aside-bottom-buttons {
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.support-button {
+  font-size: 0.8em;
+  background-color: rgba(94, 99, 102, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 40px 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gift-button {
+  font-size: 0.8em;
+  font-family: "poppins";
+  background-color: rgba(255, 204, 145, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 10px 8px 10px;
+  border-radius: 10px;
+}
+
+.gift-button button {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.log-out-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.log-out-button {
+  font-size: 0.8em;
+  font-family: "poppins";
+  background-color: transparent;
+  gap: 10px;
+  padding: 8px 30px 8px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  border-radius: 10px;
+  border: transparent;
+}
+
+.log-out-button:hover {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar-right-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.nav-tittle {
+  margin-left: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  margin: 32px 0;
+}
+
+.row {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 20px;
+  justify-content: center;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+@media all and (max-width: 768px) {
+  .col-1 {
+    width: 100%;
+  }
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+@media all and (max-width: 768px) {
+  .col-2 {
+    width: 100%;
+  }
+}
+
+.col-3 {
+  width: 25%;
+}
+@media all and (max-width: 768px) {
+  .col-3 {
+    width: 100%;
+  }
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+@media all and (max-width: 768px) {
+  .col-4 {
+    width: 100%;
+  }
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+@media all and (max-width: 768px) {
+  .col-5 {
+    width: 100%;
+  }
+}
+
+.col-6 {
+  width: 50%;
+}
+@media all and (max-width: 768px) {
+  .col-6 {
+    width: 100%;
+  }
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+@media all and (max-width: 768px) {
+  .col-7 {
+    width: 100%;
+  }
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+@media all and (max-width: 768px) {
+  .col-8 {
+    width: 100%;
+  }
+}
+
+.col-9 {
+  width: 75%;
+}
+@media all and (max-width: 768px) {
+  .col-9 {
+    width: 100%;
+  }
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+@media all and (max-width: 768px) {
+  .col-10 {
+    width: 100%;
+  }
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+@media all and (max-width: 768px) {
+  .col-11 {
+    width: 100%;
+  }
+}
+
+.col-12 {
+  width: 100%;
+}
+@media all and (max-width: 768px) {
+  .col-12 {
+    width: 100%;
+  }
+}
+
+.nocolor {
+  height: 200px;
+  width: 90px;
+  background-color: #EEF0FA;
+}
+
+.flex-graphic-content {
+  width: 90%;
+}
+
+/* orders container */
+.orders-container {
+  margin-top: 100px;
+  height: 50%;
+  margin-right: 30px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.orders-container h1 {
+  font-size: 1.5em;
+  color: grey;
+}
+
+.orders-container p {
+  text-align: center;
+}
+
+.icon-bag {
+  width: 140px;
+  height: 140px;
+  background-color: #F4F5FA;
+  border: 1px solid #E1E2E9;
+  border-radius: 500px;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.icon-bag-img {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.orders-button {
+  width: 160px;
+  height: 40px;
+  font-size: 1em;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.orders-button:hover {
+  background-color: #EEF0FA;
+  color: black;
+}
+
+.orders-button::before {
+  padding-right: 20px;
+  content: "+";
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-color: #EEF0FA;
+}
+
+.module {
+  background: white;
+  width: 100%;
+  margin: 8px;
+  min-height: 200px;
+  border-radius: 5px;
+}
+.module--m-0 {
+  margin: 0;
+}
+
+.active-module {
+  background-color: blue;
+  color: white;
+}
+
+/* aqui começa as classes das divs dentro do container*/
+.flex-top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 20px;
+}
+
+.flex-bottom-content {
+  height: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 20px;
+}
+
+.flex-bottom-content-divs {
+  display: flex;
+}
+
+.column-content { /* colunas do third-content*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 60%;
+  gap: 10px;
+}
+
+.flex-test {
+  height: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 20px;
+}
+
+.column-test {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* aqui jaz as classes das divs dentro do container*/
+.flex-top-content-bullets {
+  margin-top: 50px;
+  font-size: 0.7em;
+  color: grey;
+}
+
+.bullet::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.bullet-blue::before {
+  background-color: blue;
+}
+
+.bullet-grey::before {
+  background-color: grey;
+}
+
+.bullet-orange::before {
+  background-color: orange;
+}
+
+.flex-graphic-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  min-width: 100%;
+  min-height: 250px;
+  background-color: transparent;
+}
+
+.blue-bar {
+  height: 200px;
+  width: 60px;
+  background-color: blue;
+}
+
+.grey-bar {
+  height: 200px;
+  width: 60px;
+  background-color: grey;
+}
+
+.orange-bar {
+  height: 200px;
+  width: 130px;
+  background-color: orange;
+}
+
+/* orders content*/
+.orders-content {
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey;
+}
+
+.orders-content .date {
+  color: grey;
+}
+
+.orders-content p {
+  margin: 5px;
+}
+
+.orders-content .pending {
+  text-align: center;
+  background-color: rgb(245, 122, 122);
+  color: white;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+.orders-content .completed {
+  text-align: center;
+  background-color: rgb(73, 155, 73);
+  color: white;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+.flex-graphic-content span {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: -185px;
+}
+
+/* classes do gráfico*/
+.flex-top-content-grafic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 10px;
+}
+
+.flex-top-content-grafic span {
+  margin-left: 5px;
+  padding: 6px 22px;
+  background-color: blue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.flex-top-content-grafic span:hover {
+  background-color: #EEF0FA;
+}
+
+.flex-top-content-grafic span img {
+  margin-left: 5px;
+}
+
+.graphic-numbers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80%;
+}
+
+.graphic-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.graphic-content {
+  height: 70%;
+  width: 90%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.graphic-bar {
+  width: 13px;
+  height: 241px;
+  border-radius: 5px;
+  border: transparent;
+  background: #EEF0FA;
+  margin-bottom: 5px;
+}
+
+.graphic-bar-10 {
+  background: linear-gradient(to top, blue 85%, #EEF0FA 15%);
+}
+
+.graphic-bar-11 {
+  background: linear-gradient(to top, blue 40%, #EEF0FA 40%);
+}
+
+.graphic-bar-12 {
+  background: linear-gradient(to top, blue 60%, #EEF0FA 40%);
+}
+
+.graphic-bar-13 {
+  background: linear-gradient(to top, blue 30%, #EEF0FA 30%);
+}
+
+.graphic-bar-14 {
+  background: linear-gradient(to top, blue 80%, #EEF0FA 20%);
+}
+
+.graphic-bar-15 {
+  background: linear-gradient(to top, blue 50%, #EEF0FA 15%);
+}
+
+.graphic-bar-16 {
+  background: linear-gradient(to top, blue 80%, #EEF0FA 15%);
+}
+
+/* */
+body {
+  display: flex;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: grey;
+  font-family: "Poppins", sans-serif;
+}/*# sourceMappingURL=style.css.map */

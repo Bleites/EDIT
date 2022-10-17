@@ -1,0 +1,70 @@
+
+.nocolor{
+    height: 200px;
+    width: 90px;
+    background-color: #EEF0FA;
+}
+
+.flex-graphic-content{
+    width: 90%;
+}
+
+/* orders container */
+
+.orders-container{
+    margin-top: 100px;
+    height: 50%;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.orders-container h1{
+    font-size: 1.5em;
+    color: grey;
+}
+
+.orders-container p{
+    text-align: center;
+}
+
+.icon-bag{
+    width: 140px;
+    height: 140px;
+    background-color: #F4F5FA;
+    border: 1px solid #E1E2E9;
+    border-radius: 500px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.icon-bag-img{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.orders-button{
+    width: 160px;
+    height: 40px;
+    font-size: 1em;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.orders-button:hover{
+    background-color: #EEF0FA;
+    color: black;
+}
+
+.orders-button::before{
+    padding-right: 20px;
+    content: '+';
+}

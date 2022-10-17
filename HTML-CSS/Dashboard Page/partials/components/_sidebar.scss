@@ -1,0 +1,131 @@
+aside{
+    width: 250px;
+    min-height: 1152px;
+    background-color: white;
+}
+
+.asidebar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aside-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 25px;
+    padding: 5px 0px 10px 0px;
+}
+
+.aside-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px ;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 30px 8px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.notify-bullet::after{
+    content: '3';
+    height: 20px;
+    width: 20px;
+    background-color: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px ;  
+}
+
+.notify-conversations::after{
+    content: '13';
+}
+
+.active-button{
+    background-color: blue;
+    color: white;
+}
+
+.aside-bottom-buttons{
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.support-button{
+    font-size: 0.8em;
+    background-color: rgba(94, 99, 102, 0.1);;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 40px 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gift-button{
+    font-size: 0.8em;
+    font-family: 'poppins';
+    background-color:  rgba(255, 204, 145, 0.2);;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 10px 8px 10px;
+    border-radius: 10px;
+}
+
+.gift-button button{
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.log-out-button-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.log-out-button{
+    font-size: 0.8em;
+    font-family: 'poppins';
+    background-color: transparent;
+    gap: 10px;
+    padding: 8px 30px 8px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    border-radius: 10px;
+    border: transparent;
+}
+
+.log-out-button:hover{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}

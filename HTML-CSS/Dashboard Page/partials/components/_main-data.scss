@@ -1,0 +1,249 @@
+main{
+    width: 100%;
+    height: 100%;
+    background-color: #EEF0FA;
+}
+
+.module {
+    background: white;
+    width: 100%;
+    margin: 8px;
+    min-height: 200px;
+    border-radius: 5px;
+    &--m-0 {
+        margin: 0;
+    }
+}
+
+.active-module{
+    background-color: blue;
+    color: white;
+}
+
+/* aqui começa as classes das divs dentro do container*/
+
+.flex-top-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 20px;
+}
+
+.flex-bottom-content{
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 20px;
+}
+
+.flex-bottom-content-divs{
+    display: flex;
+}
+
+.column-content{ /* colunas do third-content*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 60%;
+    gap: 10px;
+}
+
+.flex-test{
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 20px;
+}
+
+.column-test{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* aqui jaz as classes das divs dentro do container*/
+
+.flex-top-content-bullets{
+    margin-top: 50px ;
+    font-size: 0.7em;
+    color: grey;
+}
+
+.bullet::before{
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px ;  
+}
+
+.bullet-blue::before{
+    background-color: blue;
+}
+
+.bullet-grey::before{
+    background-color: grey;
+}
+
+.bullet-orange::before{
+    background-color: orange;
+}
+
+.flex-graphic-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    min-width: 100%;
+    min-height: 250px;
+    background-color: transparent;
+}
+
+.blue-bar{
+    height: 200px;
+    width: 60px;
+    background-color: blue;
+}
+
+.grey-bar{
+    height: 200px;
+    width: 60px;
+    background-color: grey;
+}
+
+.orange-bar{
+    height: 200px;
+    width: 130px;
+    background-color: orange;
+}
+
+/* orders content*/
+
+.orders-content{
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
+
+.orders-content .date{
+    color: grey;
+}
+
+.orders-content p{
+    margin: 5px;
+}
+
+.orders-content .pending{
+    text-align: center;
+    background-color: rgb(245, 122, 122);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+.orders-content .completed{
+    text-align: center;
+    background-color: rgb(73, 155, 73);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+.flex-graphic-content span{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: -185px;
+}
+
+/* classes do gráfico*/
+.flex-top-content-grafic{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 10px;
+}
+
+.flex-top-content-grafic span{
+    margin-left: 5px ;
+    padding: 6px 22px;
+    background-color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flex-top-content-grafic span:hover{
+    background-color: #EEF0FA;
+}
+
+
+.flex-top-content-grafic span img{
+    margin-left: 5px;
+}
+
+.graphic-numbers-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.graphic-bar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.graphic-content{
+    height: 70%;
+    width: 90%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.graphic-bar{
+    width: 13px;
+    height: 241px;
+    border-radius: 5px;
+    border: transparent;
+    background: #EEF0FA;
+    margin-bottom: 5px;
+}
+
+.graphic-bar-10{
+    background: linear-gradient(to top, blue 85% , #EEF0FA 15%) ;
+}
+
+.graphic-bar-11{
+    background: linear-gradient(to top, blue 40% , #EEF0FA 40%) ;
+}
+
+.graphic-bar-12{
+    background: linear-gradient(to top, blue 60% , #EEF0FA 40%) ;
+}
+
+.graphic-bar-13{
+    background: linear-gradient(to top, blue 30% , #EEF0FA 30%) ;
+}
+
+.graphic-bar-14{
+    background: linear-gradient(to top, blue 80% , #EEF0FA 20%) ;
+}
+
+.graphic-bar-15{
+    background: linear-gradient(to top, blue 50% , #EEF0FA 15%) ;
+}
+
+.graphic-bar-16{
+    background: linear-gradient(to top, blue 80% , #EEF0FA 15%) ;
+}
+/* */

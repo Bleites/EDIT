@@ -1,0 +1,19 @@
+@import 'partials/reset';
+
+// components
+@import 'partials/components/sidebar';
+@import 'partials/components/nav';
+@import 'partials/components/grid';
+@import 'partials/components/main-no-data';
+@import 'partials/components/main-data';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body{
+    display: flex;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: grey;
+    font-family: 'Poppins', sans-serif;
+}
