@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Final</title>
+
+    <style>
+        body{
+            /* background-color: rgba(0, 0, 0, 0.381); */
+            background-color: aliceblue;
+            position: relative;
+        }
+
+         .container{
+            width: 1000px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            cursor: pointer;
+        } 
+
+        .card{
+            width: 250px;
+            height: 400px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .description{
+            font-size: 1.5rem;
+        }
+
+        .sidenav {
+        height: 100vh;
+        width: 0px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 1.5s;
+        }
+
+        .sidenavShow {
+            height: 100vh;
+            width: 500px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.381);
+            overflow-x: hidden;
+            padding-top: 60px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: white;
+            transition: 1.5s;
+        }
+
+        .sideNavImage{
+            cursor: pointer;
+            height: 300px;
+        }
+
+        .closebtn{
+            color: black;
+            background-color: white;
+            border: 1px solid white;
+            cursor: pointer;
+        }
+
+
+        .modal{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.381);
+            z-index: 1;
+            position: absolute;
+            position: fixed;
+            top: 0;
+            padding-top: 100px;
+            left: 0;
+            text-align: center;
+            text-align: center;
+            align-content: space-between;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .modalImage{
+            height: 400px;
+            width: 300px;
+        }
+
+        /* .modaloff{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            display: none;
+        } */
+
+        .closemodal{
+            color: black;
+            background-color: white;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <script>
+
+        const animesRequest = fetch('https://api.jikan.moe/v4/top/anime')
+        .then(function(response){
+            return response.json();
+            // console.log(response)
+        }).then(function(animesLoop){
+            console.log(animesLoop)
+            //aqui criamos a nossa secção principal para onde vai as divs de cada elemento
+            let section = document.createElement("section");
+            section.classList.add('container');
+            document.body.append(section);
+
+            
+            
+            let sideNav = document.createElement("div");
+            sideNav.classList.add('sidenav');
+            sideNav.setAttribute("id", "mySidenav");
+            document.body.append(sideNav);
+            
+
+            function closeNav(){
+                sideNav.classList.remove("sidenavShow");
+                console.log('fechei a nav');
+            };
+            
+
+            for(let i = 0; i < animesLoop.data.length ; i++) {
+
+            function openNav() {
+            sideNav.classList.add("sidenavShow")
+            console.log('click no botão')
+
+            let image = document.createElement("img");
+            image.src = animesLoop.data[i].images.jpg.image_url;
+            image.classList.add('sideNavImage');
+            image.height = '200';
+            sideNav.replaceChildren(image);
+
+            image.addEventListener('click', function(){
+                console.log('tatatatat');
+                let modal = document.createElement("div");
+                modal.classList.add('modal');
+                document.body.append(modal);
+                closeNav();
+
+                // modal.addEventListener('mouseup', function(){
+                //     modal.remove();
+                // });
+                
+                
+                let imagem = document.createElement('img');
+                imagem.src = animesLoop.data[i].images.jpg.image_url;
+                imagem.classList.add('modalImage');
+                modal.appendChild(imagem);
+
+                let name = document.createElement('p')
+                name.innerText = animesLoop.data[i].title;
+                modal.appendChild(name);
+
+                // if(modal = document.getElementsByClassName('modal')){
+                //     modal.remove();
+                // }
+
+                
+                let btn3 = document.createElement('button');
+                btn3.innerText = 'Close';
+                btn3.classList.add('closemodal');
+                modal.appendChild(btn3);
+                btn3.addEventListener('click', function(){
+                    modal.remove();
+                    console.log('fechar modal');
+                });
+
+            });
+
+            let title = document.createElement("p");
+            title.innerText = animesLoop.data[i].title;
+            sideNav.appendChild(title);
+
+            let rating = document.createElement("p");
+            rating.innerText = animesLoop.data[i].rating;
+            sideNav.appendChild(rating);
+
+            let fav = document.createElement("p");
+            fav.innerText = animesLoop.data[i].favorites;
+            sideNav.appendChild(fav);
+
+            let button = document.createElement("button");
+            button.setAttribute("class", "closebtn");
+            button.innerText = 'Fechar';
+            button.addEventListener('click', closeNav);
+            sideNav.appendChild(button);
+            }
+
+
+            let div = document.createElement("div");
+            div.classList.add("card");
+            div.addEventListener('click', openNav);
+
+
+            let img = document.createElement("img");
+            // img.addEventListener('click', openNav);
+            img.src = animesLoop.data[i].images.jpg.image_url;
+            img.height = '300';
+
+            let description = document.createElement('p');
+            description.classList.add('description');
+            description.innerText = animesLoop.data[i].title;
+
+            div.appendChild(img);
+            div.appendChild(description);
+            //adicionar a imagem e texto a um só elemento(div)
+            section.appendChild(div);
+            }
+            });
+
+    </script>
+    
+</body>
+</html>
